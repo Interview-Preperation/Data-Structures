@@ -3,18 +3,6 @@ package com.ds.trees;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Node {
-	int data;
-	Node right;
-	Node left;
-	
-	Node(int data){
-		this.data = data;
-		this.right = null;
-		this.left = null;
-	}
-}
-
 public class LevelOrderTraversalBT {
 	
 	private static void LOT(Node root){
@@ -50,6 +38,35 @@ public class LevelOrderTraversalBT {
 		}
 	}
 	
+	public void inorderTraversal(Node root){
+		if(root == null){
+			return;
+		}
+		
+		inorderTraversal(root.left);
+		System.out.println(root.data);
+		inorderTraversal(root.right);
+	}
+	
+	public void preorderTraversal(Node root){
+		if(root == null){
+			return;
+		}
+
+		System.out.println(root.data);
+		inorderTraversal(root.left);
+		inorderTraversal(root.right);
+	}
+	
+	public void postorderTraversal(Node root){
+		if(root == null){
+			return;
+		}
+
+		inorderTraversal(root.left);
+		inorderTraversal(root.right);
+		System.out.println(root.data);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
