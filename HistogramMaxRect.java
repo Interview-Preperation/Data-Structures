@@ -35,7 +35,7 @@ public class HistogramMaxRect {
 
         while (!stack.isEmpty()){
             int stackTop = stack.pop();
-            int area = stack.isEmpty() ? arr[stackTop] : arr[stackTop] * ( i - stack.peek() - 1);
+            int area = stack.isEmpty() ? arr[stackTop] * i : arr[stackTop] * ( i - stack.peek() - 1);
 
             if(area > max){
                 max = area;
