@@ -5,8 +5,8 @@ import java.util.Stack;
 public class EvaluateExpression {
 
 	private static int evaluate(String[] arr) throws Exception {
-		
-		if(arr == null || arr.length < 3){
+
+		if (arr == null || arr.length < 3) {
 			throw new Exception();
 		}
 		Stack<Integer> stack = new Stack<>();
